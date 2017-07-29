@@ -31,8 +31,9 @@ cscript //nologo slmgr.vbs /upk >nul&cscript //nologo slmgr.vbs /ipk TX9XD-98N7V
 :server
 if %i%==1 set KMS_Sev=kms4.MSGuides.com
 if %i%==2 set KMS_Sev=kms5.MSGuides.com
-if %i%==3 set KMS_Sev=kms6.MSGuides.com
-if %i%==4 goto notsupported
+if %i%==3 set KMS_Sev=kms6.MSGuides.com 
+if %i%==4 set KMS_Sev=kms.digiboy.ir
+if %i%==5 goto notsupported
 cscript //nologo slmgr.vbs /skms %KMS_Sev% >nul&echo ============================================================================&echo.&echo.
 cscript //nologo slmgr.vbs /ato | find /i "successfully" && (echo.&echo ============================================================================&echo.&echo #My official blog: MSGuides.com&echo.&echo #How it works: bit.ly/kms-server&echo.&echo #Please feel free to contact me at msguides.com@gmail.com if you have any questions or concerns.&echo.&echo #Please consider supporting this project: donate.msguides.com&echo #Your support is helping me keep my servers running everyday!&echo.&echo ============================================================================&choice /n /c YN /m "Would you like to visit my blog [Y,N]?" & if errorlevel 2 exit) || (echo The connection to my KMS server failed! Trying to connect to another one... & echo Please wait... & echo. & echo. & set /a i+=1 & goto server)
 explorer "http://MSGuides.com"&goto halt
