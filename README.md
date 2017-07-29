@@ -1,4 +1,4 @@
-## Windows-licence-activator
+## Windows licence activator
 
 - [x] **Window 7**
 - [x] **Window 8**
